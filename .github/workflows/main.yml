@@ -26,6 +26,6 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         source: "build/*"
-        target: "/var/www/relex-dev.com/html/*"
+        target: "/var/www/relex-dev.com/html/"
         strip_components: 1  
         overwrite: true
