@@ -10,9 +10,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Verificar el Ls
       run: |
-        ls 
-         
- 
+        ls
          
     - uses: actions/checkout@v3
     - name: Copiar el contenido del repositorio con scp.
