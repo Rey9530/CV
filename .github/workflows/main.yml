@@ -13,16 +13,16 @@ jobs:
         ls 
          
 
-         
-    - uses: actions/checkout@master
-    - name: Copiar el contenido del repositorio con scp.
-      uses: appleboy/scp-action@master 
+    - name: Check out repository
+      uses: actions/checkout@master
+
+    - name: Upload file via SSH
+      uses: nicklasfrahm/scp-action@main
       with:
+        direction: upload
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
+        insecure_password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        source: "*"
-        target: "/var/www/relex-dev.com/html"
-        strip_components: 1  
-        overwrite: true
+        source: ./
+        target: /var/www/relex-dev.com/html/
