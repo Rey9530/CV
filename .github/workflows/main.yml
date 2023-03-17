@@ -11,6 +11,9 @@ jobs:
     - name: Verificar el Ls
       run: |
         ls
+        mkdir build
+        mv index.html build/index.html
+        mv assets build/assets
          
     - uses: actions/checkout@master
     - name: Copiar el contenido del repositorio con scp.
@@ -20,7 +23,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        source: "*"
-        target: "/var/www/relex-dev.com/html"
+        source: "build/*"
+        target: "/var/www/relex-dev.com/html/*"
         strip_components: 1  
         overwrite: true
