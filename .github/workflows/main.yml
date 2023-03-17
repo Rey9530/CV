@@ -16,7 +16,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        source: "*"
+        source: "index.html,assets"
         target: "/var/www/relex-dev.com/html"
         strip_components: 1  
         overwrite: true
