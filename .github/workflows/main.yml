@@ -9,10 +9,7 @@ jobs:
     steps:  
     - name: Verificar el Ls
       run: |
-        ls
-        cat CV 
-        echo "Ver donde estoy"
-        ls
+        ls 
          
 
          
