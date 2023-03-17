@@ -3,7 +3,7 @@ name: Deploy
 on: [push]
 
 jobs:
-  deploy: 
+  Deploy: 
     runs-on: ubuntu-latest
  
     steps:  
@@ -20,4 +20,3 @@ jobs:
         target: "/var/www/relex-dev.com/html"
         strip_components: 1  
         overwrite: true
-        
