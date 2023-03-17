@@ -6,17 +6,10 @@ jobs:
   Deploy: 
     runs-on: ubuntu-latest
  
-    steps:  
+    steps:
     - uses: actions/checkout@v3
-    - name: Verificar el Ls
-      run: ls
-    
-    - uses: actions/checkout@v3
-    - name: Crear Carpeta
+    - name: Crear Carpeta y mover archivos
       run: mkdir build &&  mv index.html build/index.html && mv assets build/assets
-
-        
-        
           
     - name: Copiar el contenido del repositorio con scp.
       uses: appleboy/scp-action@master 
