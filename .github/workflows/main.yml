@@ -9,11 +9,18 @@ jobs:
     steps:  
     - uses: actions/checkout@v3
     - name: Verificar el Ls
-      run: |
-        ls
-        mkdir build
-        mv index.html build/index.html
-        mv assets build/assets
+      run: ls
+    
+    - name: Crear Carpeta
+      run: mkdir build
+
+    - name: Mover el index
+      run: mv index.html build/index.html
+
+    - name: Mover los assets
+      run: mv assets build/assets
+        
+        
          
     - uses: actions/checkout@master
     - name: Copiar el contenido del repositorio con scp.
